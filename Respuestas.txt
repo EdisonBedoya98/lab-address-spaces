@@ -7,7 +7,7 @@
     R// 7929 Megabytes
    
    ¿Cuánta esta está libre?
-    R//3821 Megabytes
+    R// 3821 Megabytes
 
    ¿Son estos los valores que usted esperaba?
    R// Si, consideraba que con ponerlo en megabaytes seria más simple dimensionar cuanta memoria tiene el equipo, aunque
@@ -19,12 +19,37 @@
     podemos apreciar como la memoria usada aumenta y de igual manera la libre disminuye.
 
     ¿Qué pasa cuando se finaliza el programa memory-user (comando kill)?
-    R//Nuestro programa deja de estar en el top de programas que hacen uso de la CPU, ademas la memoría la cual está siendo 
+    R// Nuestro programa deja de estar en el top de programas que hacen uso de la CPU, ademas la memoría la cual está siendo 
 	usada por nuestro programa se libera.
 
     ¿coinciden los valores con lo que usted esperaba? Intente esto para diferentes cantidades de uso de memoria? 
-    R//
+    R// Sí, coinciden con lo que esperabamos, debido a que al aumentar la cantidad de memoria que queremos reservar, el Mem
+	used crece proporcionalmente a la cantidad que queremos reservar, y el Mem free es inversamente proporcional.
+ 
 
     ¿Qué pasa cuando usted usa cantidades de memoria realmente grandes?
-    R//
- 5) 
+    R// En el momento de reservar la memoria no sucede nada porque la memoria aún no está en utilización entonces en este sentido es igual
+	que si tenemos cantidades de memoria pequeña, pero si dejaramos que el programa avanzara y que se llene el vector, eventualmente
+	este ocuparia toda la memoria del equipo pasaria a utilizar la swap y despúes colapsaria el sistema.
+ 
+5) ¿Cuál es la diferencia de pmap con free?
+   R// 	La diferencia entre dichos comandos es que Free nos muestra en tiempo real la información de la memoria, la que está en uso la libre y todo, de igual
+	manera de la memoria swap para todos los procesos que se estan ejecutando, y pmap nos da toda la información de un proceso a traves de un PID de cada
+	proceso, y también encontramos el consumo de memoria que genera este.
+6) Çódigo
+
+7) ¿Qué puede ver?¿Cuántas entidades diferentes conforman un espacio de direcciones moderno, a diferencia de nuestra simple concepción de code/stack/heap?
+   R// Si ejecutamos el pmap con -x podemos observar más detalles como el gasto de memoria, la aparición del RSS y el Dirty en kilobytes, con -d vemos
+	que aparece el offset y el device y realizamos la última prueba con -q y es exactamente igual al pmap pero sin el total en kilobytes.
+
+8) ¿Qué puede ver en este caso? ¿La salida de pmap es siempre la que usted espera?
+   R//Al ejecutar pmap con diferentes cantidades de memoria, nos encontramos con que el total de memoria usada crece conforme se le asigna más cantidad,
+	y este es el resultado esperado teniendo en cuenta que a mayor asignación de memoria, el total de memoria usada por el procesos deberá ser mayor.
+
+
+
+
+
+
+
+
