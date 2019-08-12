@@ -1,4 +1,4 @@
-1) ¿Para qué sirve este comando?
+﻿1) ¿Para qué sirve este comando?
     R// free nos permite ver de manera gráfica todo respecto a nuestra memoria principal y la swap, donde apreciamos
     la memoria total que tenemos, que se está usando, cuanta está libre, memoria usuda por el kernel, lo que se tiene de cache
     y una estimación de la memoria disponible para iniciar nuevas aplicaciones.
@@ -15,15 +15,16 @@
    pero al covertirla a megas aparece que la cantidad es tal como 7 gigas.
 
 4)  ¿Cómo cambia el uso total de memoria cuando su programa está corriendo?
-    R// La memoria que está siendo usada, va en aumento constanta, si se ejecuta el comando "free" de manera continua
-    podemos apreciar como la memoria usada aumente y de igual manera la libre disminuye.
+    R// La memoria que está siendo usada, va en aumento constante, si se ejecuta el comando "free" de manera continua
+    podemos apreciar como la memoria usada aumenta y de igual manera la libre disminuye.
 
     ¿Qué pasa cuando se finaliza el programa memory-user (comando kill)?
-    R//
+    R//Nuestro programa deja de estar en el top de programas que hacen uso de la CPU, ademas la memoría la cual está siendo 
+	usada por nuestro programa se libera.
 
     ¿coinciden los valores con lo que usted esperaba? Intente esto para diferentes cantidades de uso de memoria? 
     R//
 
     ¿Qué pasa cuando usted usa cantidades de memoria realmente grandes?
     R//
- 
+ 5) 
